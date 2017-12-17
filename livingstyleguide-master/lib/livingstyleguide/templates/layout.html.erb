@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="The LivingStyleGuide Gem – http://livingstyleguide.org" name="generator">
+<title><%= h(title) %></title>
+<script>
+// see: http://www.hagenburger.net/BLOG/Simple-HTML5-Fix-for-IE.html
+for(var e,l='article aside footer header nav section time picture'.split(' ');e=l.pop();document.createElement(e));
+</script>
+<style>
+<%= css %>
+</style>
+<%= head %>
+</head>
+
+<body class="livingstyleguide">
+<%= header %>
+<div class="livingstyleguide--container">
+<%= html %>
+</div>
+<%= footer %>
+</body>
+
+</html>
+

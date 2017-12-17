@@ -1,0 +1,5 @@
+~~~
+@haml
+%button.button Test
+~~~
+

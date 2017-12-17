@@ -1,0 +1,122 @@
+.livingstyleguide--code {
+  @extend %livingstyleguide--reset;
+}
+
+.livingstyleguide--code-span,
+.livingstyleguide--code-block {
+  @extend %livingstyleguide--reset;
+  background: $livingstyleguide--code-background-color;
+  border-radius: $livingstyleguide--code-border-radius;
+  color: $livingstyleguide--code-color;
+  display: inline;
+  font-family: $livingstyleguide--code-font;
+  font-size: $livingstyleguide--code-font-size;
+  font-weight: $livingstyleguide--code-font-weight;
+  overflow: scroll;
+  padding: 0 3px;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  kbd {
+    @extend %livingstyleguide--reset;
+    display: block;
+    font-weight: bold;
+
+    &:before {
+      content: "> ";
+    }
+  }
+
+  em {
+    @extend %livingstyleguide--reset;
+    color: lighten($livingstyleguide--code-color, 10%);
+    display: inline;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: underline;
+    vertical-align: baseline;
+  }
+
+  b {
+    @extend %livingstyleguide--reset;
+    color: lighten($livingstyleguide--code-color, 20%);
+    display: inline;
+    font-weight: bold;
+    vertical-align: baseline;
+  }
+
+  i {
+    @extend %livingstyleguide--reset;
+    color: lighten($livingstyleguide--code-color, 30%);
+    display: inline;
+    vertical-align: baseline;
+  }
+
+  q {
+    @extend %livingstyleguide--reset;
+    color: lighten($livingstyleguide--code-color, 30%);
+    display: inline;
+    vertical-align: baseline;
+
+    &:before,
+    &:after {
+      content: "";
+    }
+  }
+
+  var {
+    @extend %livingstyleguide--reset;
+    display: inline;
+    text-decoration: underline;
+    vertical-align: baseline;
+  }
+}
+
+.livingstyleguide--code-block {
+  display: block;//none;
+  line-height: $livingstyleguide--code-line-height;
+  padding: 3px 6px;
+  width: $livingstyleguide--width;
+
+  .show-code & {
+    display: block;
+  }
+}
+
+.livingstyleguide--example + .livingstyleguide--code-block {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+}
+
+.livingstyleguide--layout-example + .livingstyleguide--code-block {
+  background: $livingstyleguide--code-background-color;
+  border-radius: 0;
+  margin: 0 0 $livingstyleguide--gap-width;
+  padding: $livingstyleguide--gap-width 0;
+  width: 100%;
+
+  .livingstyleguide--code {
+    display: block;
+    margin: auto;
+    width: $livingstyleguide--width;
+  }
+}
+
+.livingstyleguide--font-example {
+  @extend .livingstyleguide--example;
+}
+
+.livingstyleguide--code-highlight {
+  @extend %livingstyleguide--reset;
+  background-color: $livingstyleguide--highlight-color;
+  border-radius: $livingstyleguide--highlight-border-radius;
+  display: inline;
+  vertical-align: baseline;
+}
+
+.livingstyleguide--code-highlight-block {
+  @extend %livingstyleguide--reset;
+  @extend .livingstyleguide--code-highlight;
+  display: block;
+}
+

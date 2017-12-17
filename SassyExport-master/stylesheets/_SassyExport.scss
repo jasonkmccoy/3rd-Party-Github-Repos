@@ -1,0 +1,20 @@
+///
+/// Convert passed map to json and write to <path>/<filename>.<ext>
+///
+/// @param {String} $path    - Directory path and filename
+/// @param {map}    $map     - Map to convert to json
+/// @param {Bool}   $pretty  - Pretty print json
+/// @param {Bool}   $debug   - Print debug string with path
+/// @param {Bool}   $use_env - Use ENV['PWD'] for current directory instead of Dir.pwd
+///
+/// @return {String} - Write file to path
+///
+@mixin SassyExport($path, $map, $pretty: false, $debug: false, $use_env: false) {
+    @at-root {
+        @if $debug {
+            /*! #{SassyExport($path, $map, $pretty, $debug, $use_env)} */
+        } @else {
+            %SassExport { /*! #{SassyExport($path, $map, $pretty, $debug, $use_env)} */ }
+        }
+    }
+}

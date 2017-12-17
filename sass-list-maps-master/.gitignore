@@ -1,0 +1,4 @@
+docs*
+*.gem
+*.sublime*
+node_modules
